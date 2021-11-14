@@ -2,13 +2,26 @@
     <script>
         function centroGeom(coordenada) {
             tr = [0, 0]
-	/*ar m= [Math.cos(r), -Math.sin(r),Math.sin(r), Math.cos(r)]
-	for (i=0; i < a.length; i+=2){
-	z[i]=(a[i]*m[0]+a[i+1]*m[1])
-	z[i+1]=(a[i]*m[2]+a[i+1]*m[3])*/
-            
-
+            veiX = coordenada [0], vesX = coordenada [0]
+            veiy = coordenada [1], vesY = coordenada [1]	
+            for (i = 2; i < coordenada.lengtn; i += 2){
+		if (veiX > coordenada[i])
+		  veiX = coordenada[i];
+		}if(vesX < coordenada[i]){
+                   vesX = coordenada[i];
+            }}
+		
+	  for (i = 2; i < coordenada.length; i+=2){
+                if(veiY > coordenada[i]){
+                   veiY = coordenada[i];
+                }if(vesY < coordenada[i]){
+                   vesY = coordenada[i];
+            }}
+	    prY=-(vesY+veiY)/2;
+	    prX=-(vesX+veiX)/2;
+            tr = [promX, promY]
             return tr;
+		
         }
 
         function polygon(a, colorBorde, colorRelleno) {
